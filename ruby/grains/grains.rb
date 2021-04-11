@@ -6,3 +6,17 @@ To get started with TDD, see the `README.md` file in your
 `ruby/grains` directory.
 =end
 
+class Grains 
+    def self.square(number_of_squares)
+        if number_of_squares > 0 and number_of_squares < 65 
+            return 2**(number_of_squares - 1)
+        else
+            raise ArgumentError
+        end
+    end
+
+    def self.total
+        return 2*square(64)-1
+    end
+end
+
